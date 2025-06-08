@@ -1,0 +1,24 @@
+
+{{ block "chat" . }}
+    <div class="p-4">
+        <div class="h-max overflow-y-auto p-4 space-y-4" id="chat">
+            <!-- Messages will be appended here -->
+        </div>
+
+        <form
+                hx-post="/api/query"
+                hx-target="#chat"
+                hx-swap="beforeend"
+                hx-on::after-request="this.reset()"
+                class="flex gap-2">
+            <input
+                    type="text"
+                    name="queryInput"
+                    placeholder="Type your command..."
+                    class="flex-1 p-2 border rounded">
+            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">
+                Send
+            </button>
+        </form>
+    </div>
+{{ end }}
