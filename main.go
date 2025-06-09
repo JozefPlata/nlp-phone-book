@@ -28,8 +28,10 @@ type Response struct {
 }
 
 func main() {
+	//_ = os.Remove("./contacts.db")
+
 	// Init sqlite
-	db, err := sql.Open("sqlite3", "./contacts.db")
+	db, err := sql.Open("sqlite3", "./data/contacts.db")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -265,5 +267,5 @@ func main() {
 		return c.NoContent(http.StatusOK)
 	})
 
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":8080"))
 }

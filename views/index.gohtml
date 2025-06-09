@@ -1,0 +1,14 @@
+
+{{ block "index" . }}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Nlp Phone Book</title>
+    <body>
+        {{ template "chat" . }}
+    </body>
+    </html>
+{{ end }}
