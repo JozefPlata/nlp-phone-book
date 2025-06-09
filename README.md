@@ -1,3 +1,7 @@
+### Dependencies:
+
+`Go 1.24.2`
+
 ### Build:
 
 ```bash
@@ -15,3 +19,15 @@ You need **`OPENAI_API_KEY`** env set in order to run
       -p 8080:8080 \
       nlp-phone-book
 ```
+
+### Usage:
+
+Example commands:
+
+`Add John's number 111222333`
+
+`Remove John's number`
+
+`What's John's number`
+
+`Show all contacts`
